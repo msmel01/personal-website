@@ -1,0 +1,25 @@
+{
+  "name": "personal-website",
+  "version": "1.0.0",
+  "description": "Melika's personal website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/msmel01/personal-website.git"
+  },
+  "keywords": [
+    "html",
+    "javascript",
+    "website",
+    "css"
+  ],
+  "author": "Melika Mir Sajjadi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/msmel01/personal-website/issues"
+  },
+  "homepage": "https://github.com/msmel01/personal-website#readme"
+}
