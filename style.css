@@ -1,62 +1,178 @@
-html {
-    scroll-behavior: smooth;
+* {
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    width: 100%;
-    height: 100%;
+    background-color: #222;
+    color: #ddd;
+    font-size: 18px;
+    line-height: 1.4;
+    font-weight: 300;
 }
 
-ul li {
-    list-style-type: none;
-}
-
-ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-  
-.nav-item {
-    margin-right: 1rem;
-    margin-left: 1rem;
-}
-
-a {
-    text-decoration: none;
-}
-
+/* Navigation bar */
 nav {
-    background: #fff;
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.container0 {
+    display: inline-block;
+    width: 100%;
+    /* remove background later */
+    background: #ECECEC;
+    height: 30px;
+}
+
+.toggle {
+    width: 10%;
+    height: 30px;
+    line-height: 30px;
+    float: right;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    color: #222;
+}
+
+
+.nav {
+    z-index: 2;
+    width: 100%;
+    text-align: center;
+    background-color: #ECECEC;
+    display: none;
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, .1);
+}
+
+.open {
+    width: 100%;
+    display: flex;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    opacity: 1;
+    margin-top: 90px;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-animation: 300ms show ease-out forwards;
+    animation: 300ms show ease-out forwards;
+}
+ul a {
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    display: inline-block;
+    color: #aaa;
+    font-size: 18px;
+    text-decoration:none;
+    padding: 0 10px;
+}
+
+ul a:hover {
+    background-color: #DADFE1;
+    color: #607D8B;
+}
+/* DESKTOP MODE */
+@media (min-width: 500px) {
+#nav {
+        margin: 0;
+        display: -ms-flexbox;
+        /* TWEENER - IE 10 */
+        display: -webkit-flex;
+        /* NEW - Chrome */
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        -webkit-flex-direction: row;
+        z-index: 9999;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 30px;
+    }
+    /* .open {
+        flex-direction: row;
+        -webkit-flex-direction: row;
+    } */
+    ul a {
+        height: 30px;
+        line-height: 30px;
+    }
+    .container0 {
+        display: none;
+    }
+}
+
+/* Body */
+  .description, .final {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    padding: 1rem 1.5rem;
-    box-shadow: 2px 3px 2px #f1f1f1;
-    position: sticky;
-    top: 0;
-    left: 0;
-    z-index: 1;
+    padding: 10px;
+    min-height: 80vh;
+  }
+  
+
+  h1, h2 {
+    color: white;
+    font-weight: 400;
+    margin-bottom: 0;
+  }
+  .panel pre.prettyprint {
+    font-size: 20px;
+    text-align: left;
+    width: auto;
+    font-weight: normal;
+    margin: 10px;
+    border: none;
+  }
+  .prettyprint .linenums {
+    padding: 0;
+    list-style: none;
+  }
+  .prettyprint ol li {
+    background-color: black;
+  }
+  
+  .panel.red .prettyprint .linenums > li:nth-child(n+7):nth-child(-n+9), 
+  .panel.gray .prettyprint .linenums > li:nth-child(10),
+  .panel.purple .prettyprint .linenums > li:nth-child(4),
+  .panel.green .prettyprint .linenums > li:nth-child(n+6):nth-child(-n+10) {
+    background-color: #222;
+  }
+  
+  .box {
+    width: 100px;
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+    background-color: white;
+    border-radius: 8px;
+    color: #222;
+    font-weight: 700;
+    margin-left: 20px;
+    will-change: transform;
+  }
+  .box.active {
+    background-color: orange;
+    border: 2px solid white;
   }
 
-/* Hero section CSS */
-.hero {
-    /* display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1.9rem;
-    max-width: 1100px;
-    margin: 2rem auto -6rem; */
-    text-align: center;
+  .container {
+    width: 500%;
+    height: 100%;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.hero-img {
-    width: 20%;
-    height: auto;
-    margin-bottom: -50px;
-}
+    flex-wrap: nowrap;
+  }
+  
+  .panel {
+    font-weight: 300;
+  }
