@@ -3,119 +3,133 @@
   <head>
     <meta charset="UTF-8">
     <title>Melika's personal website</title>
-    <link href='//fonts.googleapis.com/css?family=Signika+Negative:300,400,600' rel='stylesheet' type='text/css'>
+    <!-- <link rel="stylesheet" type="text/css" href="horizontal_timeline.2.0_v2.0.5.2.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel='stylesheet' href='https://codepen.io/GreenSock/pen/ZEGdQLM/7ba936b34824fefdccfe2c6d9f0b740b.css'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.css'><link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"> -->
+    <link rel="stylesheet" href="./style.css">
   </head>
   <body>
-    <nav>
-      <div class="container0">
-        <i class="toggle fas fa-bars"></i>
-      </div>
-      <ul id="nav" class="nav">
-        <a href="#">home</a>
-        <a href="#">experience</a>
-        <a href="#">projects</a>
-        <a href="#">contact</a>
-      </ul>
-    </nav>
-
-    <div class="hero">
-      <img src="./assets/smile.gif" alt="greet avatar" class="hero-img">
-      <h1 class="hero-text">Hi, I'm Melika &#128075;</h1>
-      <p class="hero-text">Computer Science 2024 @ UWaterloo.</p>
+    <div class="menu-icon">
+      <span class="menu-icon__line menu-icon__line-left"></span>
+      <span class="menu-icon__line"></span>
+      <span class="menu-icon__line menu-icon__line-right"></span>
     </div>
-
-    <div class="container">
-      <div class="panel blue">
-        Scroll down to animate horizontally &gt;
-      </div>
-      
-      <section class="panel red">
-        <div>
-        <pre class="code-block prettyprint lang-js linenums">gsap.to(".box-1", {
-      y: -130,
-      duration: 2,
-      ease: "elastic",
-      scrollTrigger: {
-        trigger: ".box-1",
-        containerAnimation: scrollTween,
-        start: "left center",
-        toggleActions: "play none none reset"
-      }
-    });</pre>
-          Fire an animation at a particular spot...
-        </div>
-        <div class="box-1 box">box-1</div>
-      </section>
-      
-      <section class="panel gray">
-        <div>
-        <pre class="code-block prettyprint lang-js linenums">gsap.to(".box-2", {
-      y: -120,
-      backgroundColor: "#1e90ff",
-      ease: "none",
-      scrollTrigger: {
-        trigger: ".box-2",
-        containerAnimation: scrollTween,
-        start: "center 80%",
-        end: "center 20%",
-        scrub: true
-      }
-    });</pre>
-      ...or scrub it back &amp; forth with the scrollbar
-    </div>
-        <div class="box-2 box">box-2</div>
-      </section>
-      <section class="panel purple">
-        <div>
-        <pre class="code-block prettyprint lang-js linenums">ScrollTrigger.create({
-      trigger: ".box-3",
-      containerAnimation: scrollTween,
-      toggleClass: "active",
-      start: "center 60%"
-    });</pre>
-          Toggle a CSS class
-        </div>
-        <div class="box-3 box">box-3</div>
-      </section>
-      <section class="panel green">
-        <div>
-        <pre class="code-block prettyprint lang-js linenums">ScrollTrigger.create({
-      trigger: ".green",
-      containerAnimation: scrollTween,
-      start: "center 65%",
-      end: "center 51%",
-      onEnter: () => console.log("enter"),
-      onLeave: () => console.log("leave"),
-      onEnterBack: () => console.log("enterBack"),
-      onLeaveBack: () => console.log("leaveBack"),
-      onToggle: self => console.log("active", self.isActive)
-    });</pre>
-          Use the rich callback system
-        </div>
-      </section>
-    </div>
-
-    <div class="final">
-      <div>
-        <h1>Wasn't that fun?</h1>
-        <p>Here are a few caveats to keep in mind:</p>
-        <ul>
-          <li>The fake-scrolling animation (just the part that's moving the container horizontally) must have no easing (<code>ease: "none"</code>).</li>
-          <li>Pinning and snapping won't work on ScrollTriggers with a <code>containerAnimation</code>.</li>
-          <li>The mapping of scroll position trigger points are based on the trigger element itself not being animated horizontally (inside the container). If you need to animate the trigger, you can either wrap it in a &lt;div&gt; and use that as the trigger instead or just factor the trigger's movement into your end position. For example, if you animate it left 100px, make the <code>end</code> 100px further to the left.</li>
-          <li>Requires ScrollTrigger 3.8.0 or later</li>
+    
+    <div class="nav">
+      <div class="nav__content">
+        <ul class="nav__list">
+          <li class="nav__list-item">Home</li>
+          <li class="nav__list-item">About</li>
+          <li class="nav__list-item">Projects</li>
+          <li class="nav__list-item">Contact</li>
         </ul>
       </div>
     </div>
+    
+    <div class="site-content">
+      <div class="hero">
+        <img src="./assets/smile.gif" alt="greet avatar" class="hero-img">
+        <h1 class="hero-title">Hi, I'm Melika</h1>
+        <p class="hero-subtitle">CS Undergrad @ UWaterloo</p>
+      </div>
+    </div>
+<!-- 
+    <div class="site-content">
+      <div class="hero">
+        <img src="./assets/smile.gif" alt="greet avatar" class="hero-img">
+        <h1 class="hero-title">Hi, I'm Melika</h1>
+        <p class="hero-subtitle">CS Undergrad @ UWaterloo</p>
+      </div>
+  
+      <div class="work">
+        <div class="horizontal-timeline" id="example" style="z-index: 1">
+          <div class="events-content">
+          <ol>
+            <li class="selected" data-horizontal-timeline='{"date": "06/09/2022", "customDisplay": "Sep 6 2022"}'>
+              <h1 class="job-title">Data Science Software Developer</h1>
+              <div class="job-details">
+                <p>NuraLogix</p>
+                <p>Toronto, ON</p>
+                <p>September 6 2022 - December 24 2022</p>
+              </div>
+            </li>
+            <li data-horizontal-timeline='{"date": "01/09/2022", "customDisplay": "Sep 1 2022"}'>
+              <h1 class="job-title">President</h1>
+              <div class="job-details">
+                <p>University of Waterloo Virtual Reality Club</p>
+                <p>Waterloo, ON</p>
+                <p>September 1 2022 - December 24 2022</p>
+              </div>
+            </li>
+            <li data-horizontal-timeline='{"date": "06/01/2022", "customDisplay": "Jan 6 2022"}'>
+              <h1 class="job-title">Data Science Researcher</h1>
+              <div class="job-details">
+                <p>Woodbridge Foam Corporation</p>
+                <p>Mississauga, ON</p>
+                <p>January 6 2022 - April 28 2022</p>
+              </div>
+            </li>
+            <li data-horizontal-timeline='{"date": "01/01/2022", "customDisplay": "Jan 1 2022"}'>
+              <h1 class="job-title">President</h1>
+              <div class="job-details">
+                <p>University of Waterloo Virtual Reality Club</p>
+                <p>Waterloo, ON</p>
+                <p>January 1 2022 - April 28 2022</p>
+              </div>
+            </li>
+            <li data-horizontal-timeline='{"date": "03/06/2021", "customDisplay": "June 3 2021"}'>
+              <h1 class="job-title">Computer Vision Software Developer</h1>
+              <div class="job-details">
+                <p>Aquadrone Student Design Team</p>
+                <p>Waterloo, ON</p>
+                <p>June 3 2022 - August 19 2022</p>
+              </div>
+            </li>
+            <li data-horizontal-timeline='{"date": "01/01/2021", "customDisplay": "Jan 1 2021"}'>
+              <h1 class="job-title">Co-director of Technology</h1>
+              <div class="job-details">
+                <p>University of Waterloo Virtual Reality Club</p>
+                <p>Waterloo, ON</p>
+                <p>January 1 2021 - April 28 2021</p>
+              </div>
+            </li>
+            <li data-horizontal-timeline='{"date": "02/05/2021", "customDisplay": "May 2 2020"}'>
+              <h1 class="job-title">Python Tools Developer</h1>
+              <div class="job-details">
+                <p>Digital Assets Group, University of Waterloo</p>
+                <p>Waterloo, ON</p>
+                <p>May 2 2020 - August 19 2020</p>
+              </div>
+            </li>
+          </ol>
+          </div>
+          </div>
+      </div>
+      <div class="projects">
+        <p>stuff written here</p>
+      </div>
+    </div> -->
     <!-- partial -->
-    <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js?r=5426'></script>
-    <script src='https://assets.codepen.io/16327/ScrollTrigger.min.js?v=3.8.0c'></script>
-    <script src='https://codepen.io/GreenSock/pen/ZEGdQLM/7ba936b34824fefdccfe2c6d9f0b740b.js'></script>
-    <script src='https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?lang=css&amp;skin=sunburst'></script><script  src="./script.js"></script>
-    <script src='navbar.js'></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="./scripts/horizontal_timeline.2.0_v2.0.5.3.js"></script> -->
+    <script src="./scripts/navbar.js"></script>
+    <!-- <script src='https://codepen.io/GreenSock/pen/ZEGdQLM/7ba936b34824fefdccfe2c6d9f0b740b.js'></script> -->
+    <!-- <script>
+      $('#example').horizontalTimeline(
+        {
+          useNavBtns: false,
+          useScrollBtns: false,
+          useScrollWheel: true,
+          dateDisplay: "date",
+          dateIntervals: {
+            "desktop": 400,
+            "tablet": 350,
+            "mobile": 320,
+            "minimal": true
+            },
+        }
+      );
+    </script> -->
   </body>
 </html>
