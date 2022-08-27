@@ -22,10 +22,17 @@
 * {
     margin: 0;
     padding: 0;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: -moz-none;
+    -o-user-select: none;
+    user-select: none;
+
 }
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -40,6 +47,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -109,7 +117,7 @@ body {
     text-align: center;
     font-size: calc(2vw + 10px);
     font-weight: 200;
-    cursor: pointer;
+    /* cursor: pointer; */
     font-family: lato-reg;
     color: #F7ECE1;
 }
@@ -119,6 +127,8 @@ body {
     display: inline-block;
     transition-delay: 0.8s;
     opacity: 0;
+    /* display: none; */
+    /* added this */
     transform: translate(0%, 100%);
     transition: opacity 0.2s ease, transform 0.3s ease;
     margin-right: 25px;
@@ -177,6 +187,8 @@ body.nav-active .nav:before {
 
 body.nav-active .nav__list-item {
     opacity: 1;
+    /* display: inline-block; */
+    cursor: pointer;
     transform: translateX(0%);
     transition: opacity 0.3s ease, transform 0.3s ease, color 0.3s ease;
 }
@@ -203,36 +215,43 @@ body.nav-active .nav__list-item:nth-child(4) {
 
 /* Body */
 .hero {
-    padding-top: 30px;
+    /* margin-top: 30px; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
-    min-height: 100%;
-    max-height: 100%;
+    /* maybe should keep 100% */
+    min-height: 100vh; 
+    max-height: 100vh;
 }
 
 /* Hero page */
 
 .hero-img {
     display: flex;
-    width: 30vw;
+    width: 300px;
     height: auto;
 }
 
 .hero-title {
     margin: 0;
     padding: 0%;
-    font-size: 10vw;
-    text-shadow: 3px 3px #5AB1BB;
+    font-size: calc(16pt + 8vw);
+    text-shadow: 0.2vw 0.2vw #5AB1BB;
     font-family: pfd-bold;
 }
 
 .hero-subtitle {
     margin: 0;
-    padding: 0%;
-    font-size: 3vw;
-    font-family: droid-italic;
+    padding: 10px 0px 0px 0px;
+    font-size: calc(8pt + 2.5vw);
+    font-family: droid-reg;
 }
 /* ******************************************************** */
+.projects {
+    width: 100%;
+    /* maybe should keep 100% */
+    min-height: 100vh; 
+    max-height: 100vh;
+}

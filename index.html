@@ -3,11 +3,9 @@
   <head>
     <meta charset="UTF-8">
     <title>Melika's personal website</title>
-    <!-- <link rel="stylesheet" type="text/css" href="horizontal_timeline.2.0_v2.0.5.2.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-    <link rel='stylesheet' href='https://codepen.io/GreenSock/pen/ZEGdQLM/7ba936b34824fefdccfe2c6d9f0b740b.css'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"> -->
     <link rel="stylesheet" href="./style.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"> -->
+    <link rel="stylesheet" href="./timeline.css">
   </head>
   <body>
     <div class="menu-icon">
@@ -20,12 +18,14 @@
       <div class="nav__content">
         <ul class="nav__list">
           <li class="nav__list-item">Home</li>
-          <li class="nav__list-item">About</li>
+          <li class="nav__list-item">Work</li>
           <li class="nav__list-item">Projects</li>
           <li class="nav__list-item">Contact</li>
         </ul>
       </div>
     </div>
+
+
     
     <div class="site-content">
       <div class="hero">
@@ -33,103 +33,107 @@
         <h1 class="hero-title">Hi, I'm Melika</h1>
         <p class="hero-subtitle">CS Undergrad @ UWaterloo</p>
       </div>
-    </div>
-<!-- 
-    <div class="site-content">
-      <div class="hero">
-        <img src="./assets/smile.gif" alt="greet avatar" class="hero-img">
-        <h1 class="hero-title">Hi, I'm Melika</h1>
-        <p class="hero-subtitle">CS Undergrad @ UWaterloo</p>
-      </div>
-  
-      <div class="work">
-        <div class="horizontal-timeline" id="example" style="z-index: 1">
-          <div class="events-content">
-          <ol>
-            <li class="selected" data-horizontal-timeline='{"date": "06/09/2022", "customDisplay": "Sep 6 2022"}'>
-              <h1 class="job-title">Data Science Software Developer</h1>
-              <div class="job-details">
-                <p>NuraLogix</p>
-                <p>Toronto, ON</p>
-                <p>September 6 2022 - December 24 2022</p>
-              </div>
-            </li>
-            <li data-horizontal-timeline='{"date": "01/09/2022", "customDisplay": "Sep 1 2022"}'>
-              <h1 class="job-title">President</h1>
-              <div class="job-details">
-                <p>University of Waterloo Virtual Reality Club</p>
-                <p>Waterloo, ON</p>
-                <p>September 1 2022 - December 24 2022</p>
-              </div>
-            </li>
-            <li data-horizontal-timeline='{"date": "06/01/2022", "customDisplay": "Jan 6 2022"}'>
-              <h1 class="job-title">Data Science Researcher</h1>
-              <div class="job-details">
-                <p>Woodbridge Foam Corporation</p>
-                <p>Mississauga, ON</p>
-                <p>January 6 2022 - April 28 2022</p>
-              </div>
-            </li>
-            <li data-horizontal-timeline='{"date": "01/01/2022", "customDisplay": "Jan 1 2022"}'>
-              <h1 class="job-title">President</h1>
-              <div class="job-details">
-                <p>University of Waterloo Virtual Reality Club</p>
-                <p>Waterloo, ON</p>
-                <p>January 1 2022 - April 28 2022</p>
-              </div>
-            </li>
-            <li data-horizontal-timeline='{"date": "03/06/2021", "customDisplay": "June 3 2021"}'>
-              <h1 class="job-title">Computer Vision Software Developer</h1>
-              <div class="job-details">
-                <p>Aquadrone Student Design Team</p>
-                <p>Waterloo, ON</p>
-                <p>June 3 2022 - August 19 2022</p>
-              </div>
-            </li>
-            <li data-horizontal-timeline='{"date": "01/01/2021", "customDisplay": "Jan 1 2021"}'>
-              <h1 class="job-title">Co-director of Technology</h1>
-              <div class="job-details">
-                <p>University of Waterloo Virtual Reality Club</p>
-                <p>Waterloo, ON</p>
-                <p>January 1 2021 - April 28 2021</p>
-              </div>
-            </li>
-            <li data-horizontal-timeline='{"date": "02/05/2021", "customDisplay": "May 2 2020"}'>
-              <h1 class="job-title">Python Tools Developer</h1>
-              <div class="job-details">
-                <p>Digital Assets Group, University of Waterloo</p>
-                <p>Waterloo, ON</p>
-                <p>May 2 2020 - August 19 2020</p>
-              </div>
-            </li>
-          </ol>
+
+      <div class="experiences">
+          <div class="timeline-nav">
+            <ul>
+              <li><a href="#f22"><span>Fall 2022</span></a></li>
+              <li><a href="#w22"><span>Winter 2022</span></a></li>
+              <li><a href="#s21"><span>Spring 2021</span></a></li>
+              <li><a href="#w21"><span>Winter 2021</span></a></li>
+              <li><a href="#s20"><span>Spring 2020</span></a></li>
+            </ul>
           </div>
-          </div>
+
+          <section class="timeline__section">
+            <div class="wrapper">
+              <h2 id="f22" class="milestone">Fall 2022</h2>
+              <div class="experience">
+                <h1>Data Science Software Developer</h1>
+                <p class="exp-spec">NuraLogix Corporation • Toronto, ON • September 2022 - December 2022</p>
+                <p class="exp-tools">
+                  <span class="tool">Python</span>
+                </p>
+                <p class="exp-desc">Work on the affective AI application Anura.</p>
+              </div>
+              <div class="experience">
+                <h1>President</h1>
+                <p class="exp-spec">University of Waterloo Virtual Reality Club • Waterloo, ON • September 2022 - December 2022</p>
+                <p class="exp-tools">
+                  <span class="tool">Leadership</span>
+                </p>
+                <p class="exp-desc">Organizing activities and managing club for Fall 2022.</p>
+              </div>
+
+              <h2 id="w22" class="milestone">Winter 2022</h2>
+              <div class="experience">
+                <h1>Data Science Intern</h1>
+                <p class="exp-spec">Woodbridge Foam Corporation • Mississauga, ON • January 2022 - April 2022</p>
+                <p class="exp-tools">
+                  <span class="tool">Python Statsmodels</span>
+                  <span class="tool">Python Scikit-learn</span>
+                  <span class="tool">Python Numpy</span>
+                  <span class="tool">R NLOpt</span>
+                  <span class="tool">Python Pandas</span>
+                  <span class="tool">Python FEDOT</span>
+                  <span class="tool">Python Matplotlib</span>
+                  <span class="tool">SQL</span></p>
+                <p class="exp-desc">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mi justo, vulputate id nunc sit amet, cursus convallis ex. Nullam quis vulputate eros. Cras non fermentum metus, vestibulum fermentum ante. Integer augue nisi, interdum a laoreet laoreet, consectetur id nulla. Praesent at bibendum nulla, malesuada malesuada magna. Mauris molestie libero eu facilisis convallis. Nullam ac condimentum libero. Aenean neque sapien, porta nec suscipit eget, sodales non nisl. Pellentesque placerat ultrices quam, id accumsan leo aliquet ac. Integer gravida, ligula quis hendrerit porta, nulla est semper sapien, ut consequat enim nunc vitae odio.
+                </p>
+              </div>
+              <div class="experience">
+                <h1>President</h1>
+                <p class="exp-spec">University of Waterloo Virtual Reality Club • Waterloo, ON • September 2022 - December 2022</p>
+                <p class="exp-tools">
+                  <span class="tool">Leadership</span>
+                </p>
+                <p class="exp-desc">Description: blah blah</p>
+              </div>
+
+              <h2 id="s21" class="milestone">Spring 2021</h2>
+              <div class="experience">
+                <h1>Robotics Software Engineer</h1>
+                <p class="exp-spec">Aquadrone Student Design Team • Waterloo, ON • June 2021 - August 2021</p>
+                <p class="exp-tools">
+                  <span class="tool">OpenCV</span>
+                  <span class="tool">ROS</span>
+                  <span class="tool">PyQT5</span>
+                </p>
+                <p class="exp-desc">Description: blah blah</p>
+              </div>
+
+              <h2 id="w21" class="milestone">Winter 2021</h2>
+              <div class="experience">
+                <h1>Co-director of Technology</h1>
+                <p class="exp-spec">University of Waterloo Virtual Reality Club • Waterloo, ON • January 2021 - April 2021</p>
+                <p class="exp-tools">
+                  <span class="tool">JavaScript 3.js</span>
+                  <span class="tool">HTML</span>
+                  <span class="tool">Communication</span>
+                </p>
+                <p class="exp-desc">Description: blah blah</p>
+              </div>
+
+              <h2 id="s20" class="milestone">Spring 2020</h2>
+              <div class="experience">
+                <h1>Animation Tools Developer</h1>
+                <p class="exp-spec">University of Waterloo Digital Assets Group • Waterloo, ON • May 2020 - August 2020</p>
+                <p class="exp-tools">
+                  <span class="tool">Python</span>
+                </p>
+                <p class="exp-desc">Description: blah blah</p>
+              </div>
+            </div>
+          </section>
       </div>
+
       <div class="projects">
-        <p>stuff written here</p>
+
       </div>
-    </div> -->
-    <!-- partial -->
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <script src="./scripts/horizontal_timeline.2.0_v2.0.5.3.js"></script> -->
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
     <script src="./scripts/navbar.js"></script>
-    <!-- <script src='https://codepen.io/GreenSock/pen/ZEGdQLM/7ba936b34824fefdccfe2c6d9f0b740b.js'></script> -->
-    <!-- <script>
-      $('#example').horizontalTimeline(
-        {
-          useNavBtns: false,
-          useScrollBtns: false,
-          useScrollWheel: true,
-          dateDisplay: "date",
-          dateIntervals: {
-            "desktop": 400,
-            "tablet": 350,
-            "mobile": 320,
-            "minimal": true
-            },
-        }
-      );
-    </script> -->
+    <script src="./scripts/timeline.js"></script>
   </body>
 </html>

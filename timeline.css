@@ -1,0 +1,137 @@
+/* Fonts */
+@font-face {
+    font-family: pfd-bold;
+    src: url('./fonts/PlayfairDisplay-Bold.otf');
+} 
+
+@font-face {
+    font-family: droid-italic;
+    src: url('./fonts/DroidSerif-Italic.ttf');
+}
+
+@font-face {
+    font-family: droid-reg;
+    src: url('./fonts/DroidSerif-Regular.ttf');
+}
+
+@font-face {
+    font-family: lato-reg;
+    src: url('./fonts/Lato-Regular.ttf');
+} 
+/* ******************************************* */
+.experiences {
+    padding: 0px;
+    margin: 100px 0px 100px 0px;
+    width: 90%;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.experience {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    padding-top: 20px;
+    font-family: lato-reg;
+}
+
+.experience h1 {
+    font-family: droid-reg;
+    font-size: calc(12pt + 2vw);
+}
+
+.exp-spec {
+    white-space: pre-wrap;
+    word-break: break-word;
+    font-family: droid-italic;
+    font-size: calc(10pt + 0.5vw);;
+    margin-bottom: 7px;
+}
+
+.exp-tools {
+    line-height: 30px;
+}
+
+.tool {
+    white-space: nowrap;
+    padding: 2px 5px 2px 5px;
+    background-color: #F3C580;
+    border-radius: 2px;
+}
+
+.milestone {
+    font-size: calc(12pt + 3vw);
+    font-family: pfd-reg;
+    padding-top: 60px;
+    color: #311E10;
+}
+
+.milestone:first-of-type {
+    padding-top: 0px;
+}
+
+.wrapper {
+  /* margin: 0px 0px 0px 10px; */
+  /* margin-left: 15px; */
+  /* padding-left: 10px; */
+  width: 100%;
+  color: #311E10;
+  flex: auto;
+}
+
+.exp-desc{
+    font-size: calc(11pt + 0.5vw);
+}
+/********************** Timeline Navigation *************************/
+.timeline-nav {
+    position: sticky;
+    top: 50vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.timeline-nav ul {
+    width: 15vw;
+  list-style: none;
+  list-style-position: inside;
+  margin-left: 30px;
+  margin-right: 30px;
+  white-space: nowrap;
+  font-size: calc(10pt + 0.8vw);
+}
+
+.timeline-nav ul li {
+    cursor: pointer;
+    /* margin: 15px 0px 10px 0px; */
+}
+
+.timeline-nav ul li a {
+  list-style-type: none;
+  text-decoration: none;
+  font-family: pfd-reg;
+  color: #311E10;
+  transition: all 0.3s ease-out;
+}
+
+
+.active span{
+    color: #5AB1BB;
+    font-family: pfd-bold;
+    transition: all 0.2s ease-in;
+}
+
+.timeline-nav ul li:hover {
+  color: #5AB1BB;
+}
+
+
+@media (max-width: 568px) {
+    .timeline-nav {
+        display: none;
+    }
+    .wrapper {
+        margin-left: 10px;
+    }
+}
