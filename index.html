@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>Melika's personal website</title>
     <link rel="stylesheet" href="./style.css">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"> -->
     <link rel="stylesheet" href="./timeline.css">
   </head>
   <body>
@@ -24,8 +23,6 @@
         </ul>
       </div>
     </div>
-
-
     
     <div class="site-content">
       <div class="hero">
@@ -79,7 +76,7 @@
                   <span class="tool">Python Matplotlib</span>
                   <span class="tool">SQL</span></p>
                 <p class="exp-desc">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mi justo, vulputate id nunc sit amet, cursus convallis ex. Nullam quis vulputate eros. Cras non fermentum metus, vestibulum fermentum ante. Integer augue nisi, interdum a laoreet laoreet, consectetur id nulla. Praesent at bibendum nulla, malesuada malesuada magna. Mauris molestie libero eu facilisis convallis. Nullam ac condimentum libero. Aenean neque sapien, porta nec suscipit eget, sodales non nisl. Pellentesque placerat ultrices quam, id accumsan leo aliquet ac. Integer gravida, ligula quis hendrerit porta, nulla est semper sapien, ut consequat enim nunc vitae odio.
+                  Description
                 </p>
               </div>
               <div class="experience">
@@ -129,11 +126,30 @@
       </div>
 
       <div class="projects">
+        <h1 class="proj-title">Featured Projects</h1>
+        <div id="proj-category">
+          <button class="filter-btn btn-active" onclick="filterSelection('all')">All Projects</button>
+          <button class="filter-btn" onclick="filterSelection('ai')">AI/ML</button>
+          <button class="filter-btn" onclick="filterSelection('web')">Web</button>
+          <button class="filter-btn" onclick="filterSelection('vr')">VR/AR</button>
+          <button class="filter-btn" onclick="filterSelection('robotics')">Robotics</button>
+          <!-- Adding soon -->
+          <!-- <button class="filter-btn" onclick="filterSelection('game')"></button> -->
+        </div>
+
+        <div class="proj-container">
+          <div class="filter-div web">Personal Website</div>
+          <div class="filter-div web vr">Three.js workshop</div>
+          <div class="filter-div vr">UWVR Talks Podcast</div>
+          <div class="filter-div robotics">Autonomous Racing Drones</div>
+          <div class="filter-div ai">Neural Network from scratch</div>
+        </div>
 
       </div>
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
     <script src="./scripts/navbar.js"></script>
     <script src="./scripts/timeline.js"></script>
+    <script src="./scripts/cards.js"></script>
   </body>
 </html>
