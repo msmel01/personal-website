@@ -72,9 +72,6 @@
 }
 
 .wrapper {
-  /* margin: 0px 0px 0px 10px; */
-  /* margin-left: 15px; */
-  /* padding-left: 10px; */
   width: 90%;
   color: #311E10;
   flex: auto;
@@ -113,19 +110,19 @@
   font-family: pfd-reg;
   color: #311E10;
   transition: all 0.3s ease-out;
+  cursor: pointer;
 }
 
+.timeline-nav ul li a:hover {
+    color: #5AB1BB;
+}
+  
 
 .active span{
     color: #5AB1BB;
     font-family: pfd-bold;
     transition: all 0.2s ease-in;
 }
-
-.timeline-nav ul li:hover {
-  color: #5AB1BB;
-}
-
 
 @media (max-width: 568px) {
     .timeline-nav {
