@@ -10,6 +10,11 @@
 }
 
 @font-face {
+    font-family: droid-bold;
+    src: url('./fonts/DroidSerif-Bold.ttf');
+}
+
+@font-face {
     font-family: droid-reg;
     src: url('./fonts/DroidSerif-Regular.ttf');
 }
@@ -17,17 +22,36 @@
 @font-face {
     font-family: lato-reg;
     src: url('./fonts/Lato-Regular.ttf');
+}
+
+@font-face {
+    font-family: lato-italic;
+    src: url('./fonts/Lato-Italic.ttf');
 } 
 /* ********************************************************* */
+@-webkit-keyframes translateIn {
+    from { transform: translate(0px, 0px); }
+      to { transform: translate(-30px, -30px); }
+}
+
+@keyframes translateIn {
+    from { transform: translate(0px, 0px); }
+      to { transform: translate(-30px, -30px); }
+}
+
+@-webkit-keyframes translateOut {
+    from { transform: translate(-30px, -30px); }
+      to { transform: translate(0px, 0px); }
+}
+
+@keyframes translateOut {
+    from { transform: translate(-30px, -30px); }
+      to { transform: translate(0px, 0px); }
+}
+/* *********************************************************** */
 * {
     margin: 0;
     padding: 0;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: -moz-none;
-    -o-user-select: none;
-    user-select: none;
-
 }
 
 html {
@@ -251,7 +275,6 @@ body.nav-active .nav__list-item:nth-child(4) {
 .projects {
     width: 100%;
     min-height: 100vh; 
-    /* max-height: 100vh; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -278,7 +301,6 @@ body.nav-active .nav__list-item:nth-child(4) {
 .filter-btn {
     border: none;
     outline: none;
-    /* width: 8vw; */
     padding: 5px 12px;
     background-color: #5AB1BB;
     cursor: pointer;
@@ -311,18 +333,88 @@ body.nav-active .nav__list-item:nth-child(4) {
     justify-content: center;
 }
 
-.filter-div {
-    width: 300px;
-    height: 200px;
-    white-space: nowrap;
-    margin: 0px 2vw;
-    background-color: #311E10;
-    color: #F7ECE1;
-    display: none; /* Hidden by default */
-  }
-  
-/* The "show" class is added to the filtered elements */
+.card {
+    width: 400px;
+    height: 250px;
+    margin-top: 30px;
+    position: relative;
+    outline: dashed 2px #311E10;
+    display: none;
+}
+
 .show {
     display: block;
 }
-  
+
+.card-default, .card-hover {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #F7ECE1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-hover {
+    transform: translate(0px, 0px);
+    outline: solid 2px #5AB1BB;
+    visibility: hidden;
+    transition: transform 0.3s ease, visibility 0.2s ease;
+}
+
+.card-default {
+    align-items: center;
+    opacity: 1;
+    outline: solid 2px #311E10;
+    transition: all 0.35s ease-in;
+}
+
+.card:hover .card-hover {
+    transition: all 0.5s ease;
+    transform: translate(-30px, -30px);
+    visibility: visible;
+}
+
+.card:hover .card-default {
+    opacity: 0;
+    transition: all 0.1s ease-in;
+}
+
+.mdi {
+    font-size: 66pt;
+    color: #311E10;
+    padding-top: 40px;
+}
+
+.proj-name {
+    width: 100%;
+    text-align: center;
+    font-family: droid-bold;
+    font-size: 22pt;
+    padding: 0px 0px 5px 0px;
+}
+
+.proj-tools {
+    width: 65%;
+    text-align: center;
+    font-family: lato-reg;
+    font-size: 12pt;
+}
+
+.proj-desc {
+    font-size: 15pt;
+    font-family: lato-reg;
+    padding: 35px 15px 0px 15px;
+    text-align: left;
+}
+
+.proj-links {
+    padding: 10px 15px 0px 15px;
+    font-family: lato-italic;
+}
+
+.proj-links a{
+    color: #5AB1BB;
+    font-size: 13pt;
+    text-decoration: none;
+}
